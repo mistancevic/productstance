@@ -65,6 +65,9 @@ h2 { font-family: var(--font-display); font-size: 22px; line-height: 1.3; margin
 .step::before { content: ""; position: absolute; left: 21px; top: 34px; bottom: 0; width: 2px; background: var(--line); }
 .step:last-child::before { display: none; }
 .num { width: 18px; height: 18px; margin: 9px 13px 0; border-radius: 50%; background: var(--surface); border: 3px solid var(--line); }
+.with-shot { display: grid; grid-template-columns: minmax(0, 1fr) 150px; gap: 18px; align-items: start; }
+.shot { width: 150px; height: auto; border-radius: 14px; border: 1px solid var(--line); box-shadow: 0 6px 18px rgba(18,32,63,.18); }
+@media (max-width: 560px) { .with-shot { grid-template-columns: 1fr; } .shot { width: 180px; } }
 .cta { display: inline-block; margin-top: 8px; font-weight: 600; font-size: 15px; text-decoration: none; }
 .cta:hover { text-decoration: underline; }
 .step.live .num { background: var(--accent); color: var(--surface); border-color: var(--accent); }
@@ -123,15 +126,26 @@ footer .wrap { padding-block: 20px 32px; border-top: 1px solid var(--line); font
 
     <section>
       <h2>One stack, each built on the last</h2>
-      <p class="sub">Five pieces of work, newest first. Each one used what the one below it taught me.</p>
+      <p class="sub">Five pieces of work, starting with what is live today. Each one builds on what the others taught me.</p>
       <ol class="stack">
         <li class="step live">
           <div class="num" aria-hidden="true"></div>
-          <div class="step-body">
+          <div class="step-body with-shot">
+          <div class="shot-text">
             <h3>Chef Mealan <span class="tag">Live pilot</span></h3>
             <p>A meal planning app for nutrition coaches and their clients. It sizes each meal to the client's calorie and protein targets. Live since September 2026 in a closed pilot.</p>
             <p class="meta">Built with Claude Code. Evals for the AI parts, automated tests and end-to-end walkthroughs before every release.</p>
             <a class="cta" href="https://chefmealan.com" target="_blank" rel="noopener">Visit chefmealan.com →</a>
+          </div>
+          <img class="shot" src="images/chef-mealan-plate.jpg" alt="Chef Mealan: a meal photo read into foods and scored against the client's plan" width="360" height="754">
+          </div>
+        </li>
+        <li class="step">
+          <div class="num" aria-hidden="true"></div>
+          <div class="step-body">
+            <h3>Worth Building <span class="tag">Playbook</span></h3>
+            <p>A step-by-step playbook for building products with AI: what to hand to AI, and what stays a human responsibility. It grew out of Xnumia and the Product Faculty AI Product Management course.</p>
+            <a class="cta" href="https://github.com/mistancevic/worth-building/blob/main/Worth-Building-v2-Milan-Stancevic.pdf" target="_blank" rel="noopener">Read the free book →</a>
           </div>
         </li>
         <li class="step">
@@ -141,14 +155,6 @@ footer .wrap { padding-block: 20px 32px; border-top: 1px solid var(--line); font
             <p>The prototype before Chef Mealan, built with the Worth Building method. I wrote its eval suite before the product.</p>
             <p class="meta">Capstone Honors, AI Product Management Certificate, Product Faculty.</p>
             <a class="cta" href="https://mistancevic.github.io/platemate/" target="_blank" rel="noopener">Open the prototype and its evals →</a>
-          </div>
-        </li>
-        <li class="step">
-          <div class="num" aria-hidden="true"></div>
-          <div class="step-body">
-            <h3>Worth Building <span class="tag">Playbook</span></h3>
-            <p>A step-by-step playbook for building products with AI: what to hand to AI, and what stays a human responsibility. It grew out of Xnumia and the Product Faculty AI Product Management course.</p>
-            <a class="cta" href="https://github.com/mistancevic/worth-building/blob/main/Worth-Building-v2-Milan-Stancevic.pdf" target="_blank" rel="noopener">Read the free book →</a>
           </div>
         </li>
         <li class="step">
