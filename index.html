@@ -87,6 +87,8 @@ h2 { font-family: var(--font-display); font-size: 22px; line-height: 1.3; margin
 .books { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; }
 .book { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px; display: grid; gap: 6px; align-content: start; text-decoration: none; color: var(--ink); }
 a.book:hover { border-color: var(--accent); }
+.book-cover { display: block; width: 100%; max-width: 180px; height: auto; aspect-ratio: 300 / 445; object-fit: cover; border-radius: 4px; margin-bottom: 8px; box-shadow: 0 6px 16px rgba(18,32,63,.18); }
+.book-cover.ph { display: grid; place-items: center; border: 1.5px dashed var(--line); box-shadow: none; color: var(--muted); font-weight: 600; font-size: 14px; }
 .book h3 { margin: 0; font-size: 17px; font-weight: 600; }
 .book p { margin: 0; font-size: 15px; color: var(--muted); }
 .book .go { font-size: 14px; font-weight: 600; color: var(--accent); }
@@ -225,18 +227,21 @@ footer .wrap { padding-block: 20px 32px; border-top: 1px solid var(--line); font
       <p class="sub">I am the author of Worth Building and Worthy Numbers. Worth Eating comes next.</p>
       <div class="books">
         <a class="book" href="https://github.com/mistancevic/worth-building/blob/main/Worth-Building-v2-Milan-Stancevic.pdf" target="_blank" rel="noopener">
+          <img class="book-cover" src="images/worth-building-cover.jpg" alt="Worth Building cover" width="300" height="464">
           <span class="tag">Product playbook</span>
           <h3>Worth Building</h3>
           <p>The product playbook I wanted beside me when one question was still unresolved: is this worth building?</p>
           <span class="go">Read on GitHub</span>
         </a>
         <a class="book" href="https://www.chefmealan.com/books/worthy-numbers.pdf" target="_blank" rel="noopener">
+          <img class="book-cover" src="images/worthy-numbers-cover.jpg" alt="Worthy Numbers cover" width="300" height="426">
           <span class="tag">Food guide</span>
           <h3>Worthy Numbers</h3>
           <p>The numbers about your food, and which ones help you decide. Six food label numbers, what they tell you, and how to use them at your next meal.</p>
           <span class="go">Read the PDF</span>
         </a>
         <div class="book next">
+          <div class="book-cover ph" aria-hidden="true">Worth Eating</div>
           <span class="tag">Coming next</span>
           <h3>Worth Eating</h3>
           <p>The next book in the series.</p>
