@@ -66,6 +66,7 @@ h2 { font-family: var(--font-display); font-size: 22px; line-height: 1.3; margin
 .step:last-child::before { display: none; }
 .num { width: 18px; height: 18px; margin: 9px 13px 0; border-radius: 50%; background: var(--surface); border: 3px solid var(--line); }
 .with-shot { display: grid; grid-template-columns: minmax(0, 1fr) 150px; gap: 18px; align-items: start; }
+.shot.cover { border-radius: 4px; }
 .shot { width: 150px; height: auto; border-radius: 14px; border: 1px solid var(--line); box-shadow: 0 6px 18px rgba(18,32,63,.18); }
 @media (max-width: 560px) { .with-shot { grid-template-columns: 1fr; } .shot { width: 180px; } }
 .cta { display: inline-block; margin-top: 8px; font-weight: 600; font-size: 15px; text-decoration: none; }
@@ -142,10 +143,13 @@ footer .wrap { padding-block: 20px 32px; border-top: 1px solid var(--line); font
         </li>
         <li class="step">
           <div class="num" aria-hidden="true"></div>
-          <div class="step-body">
+          <div class="step-body with-shot">
+          <div class="shot-text">
             <h3>Worth Building <span class="tag">Playbook</span></h3>
-            <p>A step-by-step playbook for building products with AI: what to hand to AI, and what stays a human responsibility. It grew out of Xnumia and the Product Faculty AI Product Management course.</p>
+            <p>Product thinking for the AI and agentic era. Six connected product decisions, from where to focus to what changed in real use. Human, code, AI and agents may each carry part of the work; the decisions stay with people.</p>
             <a class="cta" href="https://github.com/mistancevic/worth-building/blob/main/Worth-Building-v2-Milan-Stancevic.pdf" target="_blank" rel="noopener">Read the free book →</a>
+          </div>
+          <img class="shot cover" src="images/worth-building-cover.jpg" alt="Worth Building, a product playbook. Product thinking for the AI and agentic era" width="300" height="464">
           </div>
         </li>
         <li class="step">
@@ -182,12 +186,12 @@ footer .wrap { padding-block: 20px 32px; border-top: 1px solid var(--line); font
         <li class="way">
           <span class="tag">1 · Direction</span>
           <h3>Where do we play?</h3>
-          <p>Align with the business first: which market, which customers, which goal.</p>
+          <p>Start with value. Align with the business on the market, the customers and the goal.</p>
         </li>
         <li class="way">
           <span class="tag">2 · Discovery</span>
           <h3>What are we solving, for whom?</h3>
-          <p>Find the real problem and the people who have it, with evidence from them.</p>
+          <p>Prove the opportunity: the real problem, the people who have it, and the value gap.</p>
         </li>
         <li class="way">
           <span class="tag">3 · Worth solving</span>
