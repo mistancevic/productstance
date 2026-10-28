@@ -62,9 +62,11 @@ h2 { font-family: var(--font-display); font-size: 22px; line-height: 1.3; margin
 .stack { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
 .step { display: grid; grid-template-columns: 44px 1fr; gap: 16px; position: relative; padding-bottom: 26px; }
 .step:last-child { padding-bottom: 0; }
-.step::before { content: ""; position: absolute; left: 21px; top: 40px; bottom: 0; width: 2px; background: var(--line); }
+.step::before { content: ""; position: absolute; left: 21px; top: 34px; bottom: 0; width: 2px; background: var(--line); }
 .step:last-child::before { display: none; }
-.num { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; font-family: var(--font-mono); font-size: 14px; color: var(--accent); background: var(--surface); border: 2px solid var(--line); }
+.num { width: 18px; height: 18px; margin: 9px 13px 0; border-radius: 50%; background: var(--surface); border: 3px solid var(--line); }
+.cta { display: inline-block; margin-top: 8px; font-weight: 600; font-size: 15px; text-decoration: none; }
+.cta:hover { text-decoration: underline; }
 .step.live .num { background: var(--accent); color: var(--surface); border-color: var(--accent); }
 .step-body { min-width: 0; padding-top: 6px; }
 .step h3 { margin: 0; font-size: 18px; font-weight: 600; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
@@ -121,45 +123,47 @@ footer .wrap { padding-block: 20px 32px; border-top: 1px solid var(--line); font
 
     <section>
       <h2>One stack, each built on the last</h2>
-      <p class="sub">Five pieces of work, in the order they happened. Each one used what the previous one taught me.</p>
+      <p class="sub">Five pieces of work, newest first. Each one used what the one below it taught me.</p>
       <ol class="stack">
+        <li class="step live">
+          <div class="num" aria-hidden="true"></div>
+          <div class="step-body">
+            <h3>Chef Mealan <span class="tag">Live pilot</span></h3>
+            <p>A meal planning app for nutrition coaches and their clients. It sizes each meal to the client's calorie and protein targets. Live since September 2026 in a closed pilot.</p>
+            <p class="meta">Built with Claude Code. Evals for the AI parts, automated tests and end-to-end walkthroughs before every release.</p>
+            <a class="cta" href="https://chefmealan.com" target="_blank" rel="noopener">Visit chefmealan.com →</a>
+          </div>
+        </li>
         <li class="step">
-          <div class="num">1</div>
+          <div class="num" aria-hidden="true"></div>
+          <div class="step-body">
+            <h3>PlateMate <span class="tag">Prototype</span></h3>
+            <p>The prototype before Chef Mealan, built with the Worth Building method. I wrote its eval suite before the product.</p>
+            <p class="meta">Capstone Honors, AI Product Management Certificate, Product Faculty.</p>
+            <a class="cta" href="https://mistancevic.github.io/platemate/" target="_blank" rel="noopener">Open the prototype and its evals →</a>
+          </div>
+        </li>
+        <li class="step">
+          <div class="num" aria-hidden="true"></div>
+          <div class="step-body">
+            <h3>Worth Building <span class="tag">Playbook</span></h3>
+            <p>A step-by-step playbook for building products with AI: what to hand to AI, and what stays a human responsibility. It grew out of Xnumia and the Product Faculty AI Product Management course.</p>
+            <a class="cta" href="https://github.com/mistancevic/worth-building/blob/main/Worth-Building-v2-Milan-Stancevic.pdf" target="_blank" rel="noopener">Read the free book →</a>
+          </div>
+        </li>
+        <li class="step">
+          <div class="num" aria-hidden="true"></div>
+          <div class="step-body">
+            <h3>Xnumia <span class="tag">Agentic payments</span></h3>
+            <p>Stress-testing the Xnumia idea in my AI canvas, plus prototypes in AI Studio, won me the product lead role on the founding team of this agentic payments platform. I then defined the product and its documentation.</p>
+          </div>
+        </li>
+        <li class="step">
+          <div class="num" aria-hidden="true"></div>
           <div class="step-body">
             <h3>Continuous PM OS <span class="tag">AI canvas</span></h3>
             <p>My own AI canvas for testing product ideas. It walks an idea through the stages it needs to survive: which problem, for which segment, then the solution.</p>
             <p class="meta">Built in Google AI Studio with Gemini.</p>
-          </div>
-        </li>
-        <li class="step">
-          <div class="num">2</div>
-          <div class="step-body">
-            <h3>Xnumia <span class="tag">Agentic payments</span></h3>
-            <p>Stress-testing the Xnumia idea in that canvas, plus prototypes in AI Studio, won me the product lead role on the founding team of this agentic payments platform. I then defined the product and its documentation.</p>
-          </div>
-        </li>
-        <li class="step">
-          <div class="num">3</div>
-          <div class="step-body">
-            <h3>Worth Building <span class="tag">Playbook</span></h3>
-            <p>A step-by-step playbook for building products with AI: what to hand to AI, and what stays a human responsibility. It grew out of Xnumia and the Product Faculty AI Product Management course.</p>
-            <p class="meta">Free book. <a href="https://github.com/mistancevic/worth-building/blob/main/Worth-Building-v2-Milan-Stancevic.pdf" target="_blank" rel="noopener">Read it on GitHub</a>.</p>
-          </div>
-        </li>
-        <li class="step">
-          <div class="num">4</div>
-          <div class="step-body">
-            <h3>PlateMate <span class="tag">Prototype</span></h3>
-            <p>The prototype before Chef Mealan, built with the Worth Building method. I wrote its eval suite before the product.</p>
-            <p class="meta">Capstone Honors, AI Product Management Certificate, Product Faculty. <a href="https://mistancevic.github.io/platemate/" target="_blank" rel="noopener">Open the prototype</a>, with its evals inside.</p>
-          </div>
-        </li>
-        <li class="step live">
-          <div class="num">5</div>
-          <div class="step-body">
-            <h3><a href="https://chefmealan.com" target="_blank" rel="noopener">Chef Mealan</a> <span class="tag">Live pilot</span></h3>
-            <p>A meal planning app for nutrition coaches and their clients. It sizes each meal to the client's calorie and protein targets. Live at chefmealan.com since September 2026 in a closed pilot.</p>
-            <p class="meta">Built with Claude Code. Evals for the AI parts, automated tests and end-to-end walkthroughs before every release.</p>
           </div>
         </li>
       </ol>
